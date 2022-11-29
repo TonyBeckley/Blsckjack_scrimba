@@ -2,15 +2,15 @@ let hasBlackjack = false
 let isAlive = false
 let message = document.getElementById("messageEl")
 let card = document.getElementById("card-fn")
-let sumFn = documet.getElementById("sum-fn")
+let sumFn = document.getElementById("sum-fn")
 let messageEl = "" 
 let sum = 0
 let firstCard 
 let secondCard
-let cards
+let cards = []
 
 function randGen (){
-    Math.floor(Math.random() * 13) + 1
+    return Math.floor(Math.random() * 13) + 1
 } 
 
 function startFn (){
@@ -32,6 +32,7 @@ function renderGen(){
     }
 
     sumFn.textContent = "Sum: " + sum
+
     if(sum <= 20) {
         message.textContent = "Do you want to draw a new card" 
     }
@@ -49,7 +50,7 @@ function newCard(){
     if (hasBlackjack === false && isAlive === true){
         let newDraw = randGen()
         sum += newDraw
-        cards.push(cards)
+        cards.push(newDraw)
         renderGen()
     }
 }
