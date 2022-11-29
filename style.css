@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: green;
+    color: white;
+}
+h1{
+    margin-bottom: 7px;
+}
+p{
+    margin-bottom: 3px;
+}
+button{
+    width: 100px;
+    margin: 5px;
+    border-radius: 5px;
+    border-color: bisque;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
